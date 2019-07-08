@@ -86,3 +86,37 @@ img {
   font-weight: bold;
   text-transform: uppercase;
 }
+
+/* mixer */
+.mixer {
+  margin-top: 3em;
+  text-align: center;
+}
+
+.mixer .container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: 2em;
+}
+
+.mixer .sub-section {
+  background-image: url("https://macoiffeuseafro.com/blog/wp-content/uploads/2018/02/photo-1455813870877-04a32045af63-e1518970984573.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 300px;
+}
+
+.mixer .button {
+  text-decoration: none;
+  background: #1890ff;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 5px;
+  border: none;
+}
+
+.mixer a {
+  margin-top: 4em;
+}
