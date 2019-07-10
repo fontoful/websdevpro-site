@@ -122,7 +122,7 @@ img {
 .faq {
   padding: 7em 2em 5em;
   text-align: center;
-  margin-bottom: 3em;
+  background: #f5f5f5;
 }
 
 .faq h1 {
@@ -162,6 +162,12 @@ img {
   display: none;
 }
 
+.slider span {
+  color: rgba(0, 0, 0, 0.87);
+  padding: 5px;
+  font-weight: 400;
+}
+
 .slider .display.active {
   display: block;
 }
@@ -180,4 +186,70 @@ img {
   left: 3em;
   bottom: 2em;
   cursor: pointer;
+}
+
+/* newsletter */
+
+.newsletter {
+  background-image: url("https://www.furniturefactor.co.uk/ekmps/shops/ronzfurniture/images/luna-alpine-white-flexi-corner-computer-office-desk-3183-p.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 417px;
+}
+
+.newsletter > * {
+  margin: 10px;
+}
+
+.newsletter h1 {
+  font-size: 2rem;
+  padding: 0.6em;
+}
+
+.newsletter input.emailInput {
+  border-radius: 0;
+  border: none;
+  margin-bottom: 2em;
+  background-color: transparent;
+}
+
+.newsletter input {
+  border-bottom: 3px solid #000;
+  padding: 15px 2px;
+}
+
+.newsletter .button {
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  background: #1890ff;
+  color: #fff;
+  padding: 15px 25px;
+  text-align: center;
+}
+
+/* cta */
+
+.cta {
+  background: #1890ff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  height: 248px;
+}
+
+.cta .button {
+  background: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
 }
