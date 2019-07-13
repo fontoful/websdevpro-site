@@ -285,3 +285,58 @@ img {
 .text-center {
   text-align: center !important;
 }
+
+@media (min-width: 700px) {
+  img {
+    max-width: 100%;
+  }
+  .showcase .image-div {
+    display: block;
+  }
+
+  .showcase .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+  }
+
+  .features .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 2em;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  /* .mixer .wrapper */
+
+  .mixer {
+    min-height: 0px;
+  }
+
+  .mixer .wrapper .sub-section,
+  .mixer .wrapper .container {
+    min-height: 0px;
+  }
+
+  .mixer .wrapper {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .mixer .wrapper {
+    display: grid;
+    min-height: 0;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "area1 area2"
+      "area2 area1";
+  }
+}
