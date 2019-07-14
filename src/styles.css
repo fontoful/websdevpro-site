@@ -1,9 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:300|IBM+Plex+Sans|Sonsie+One&display=swap");
 
+:root {
+  --bg-color: #1890ff;
+  --light-bg-color: #3595ee;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+a,
+button {
+  outline: none;
 }
 
 body {
@@ -63,6 +73,11 @@ img {
   text-align: center;
 }
 
+.showcase button:hover {
+  background: var(--light-bg-color);
+  font-weight: 500;
+  cursor: pointer;
+}
 /* Features */
 
 .features {
@@ -91,9 +106,25 @@ img {
 .mixer {
   margin-top: 3em;
   text-align: center;
+
+  overflow: hidden;
 }
 
-.mixer .container {
+.mixer > * {
+  margin: 2em;
+}
+
+.mixer .container1 {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mixer .container2 {
   width: 90%;
   margin: auto;
   overflow: hidden;
@@ -110,11 +141,17 @@ img {
   padding: 15px 25px;
   border-radius: 5px;
   border: none;
+  margin: 1rem 0px;
 }
 
 .mixer a.button {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.mixer .button:hover,
+.mixer a.button:hover {
+  background: var(--light-bg-color);
 }
 
 /* FAQ sections */
@@ -223,7 +260,7 @@ img {
 
 .newsletter input:hover {
   outline: none;
-  background: rgba(0, 0, 0, 0.87);
+  background: rgba(0, 0, 0, 0.5);
   color: #fff;
   width: 80%;
 }
@@ -316,11 +353,46 @@ img {
 
   .mixer {
     min-height: 0px;
+    height: 70vh;
   }
 
   .mixer .wrapper .sub-section,
   .mixer .wrapper .container {
     min-height: 0px;
+  }
+
+  .mixer .wrapper .sub-section1 {
+    background-image: url("https://cdn.pixabay.com/photo/2017/05/12/08/29/coffee-2306471__340.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .mixer .wrapper .sub-section2 {
+    background-image: url("https://cdn.pixabay.com/photo/2013/11/23/05/07/flower-216307_960_720.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .mixer .wrapper .container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .mixer .wrapper .container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
 
   .mixer .wrapper {
@@ -336,7 +408,107 @@ img {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-      "area1 area2"
-      "area2 area1";
+      "topleft topright"
+      "bottomleft bottomright";
+  }
+
+  .mixer .wrapper .sub-section1 {
+    grid-area: topleft;
+  }
+
+  .mixer .wrapper .container1 {
+    grid-area: topright;
+  }
+
+  .mixer .wrapper .sub-section2 {
+    grid-area: bottomright;
+  }
+
+  .mixer .wrapper .container2 {
+    grid-area: bottomleft;
+  }
+
+  .mixer .wrapper > * > * {
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* FAQ section */
+
+  .faq .grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 70%;
+    margin: auto;
+  }
+
+  /* Slider section */
+
+  .slider .white-bg {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 2em;
+    position: relative;
+  }
+
+  .slider .arrows .fa-arrow-left,
+  .slider .arrows .fa-arrow-right {
+    position: absolute;
+  }
+
+  .slider .arrows .fas.fa-arrow-left {
+    left: 50%;
+    bottom: 5px;
+  }
+
+  /* newsletter */
+
+  .newsletter {
+    position: relative;
+  }
+
+  .newsletter h1 {
+    font-size: 34px;
+  }
+
+  .newsletter .emailInput,
+  .newsletter .emailInput:hover {
+    width: 50%;
+  }
+
+  .newsletter .emailInput:hover,
+  .newsletter .emailInput:focus {
+    background: #fff;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .newsletter h1,
+  .newsletter input,
+  button {
+    z-index: 2;
+    color: #fff;
+  }
+
+  .newsletter::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  /* cta */
+
+  .cta {
+    display: flex;
+    height: 8rem;
+  }
+
+  .cta > * {
+    margin: 2em;
   }
 }

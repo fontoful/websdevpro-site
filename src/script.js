@@ -38,7 +38,6 @@ rightArrow.addEventListener("click", slideRight);
 leftArrow.addEventListener("click", slideLeft);
 
 // make it slid every 3 seconds
-setInterval(() => {
-  slideRight();
-}, 3000);
-
+// setInterval(() => {
+//   slideRight();
+// }, 3000);
