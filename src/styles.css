@@ -237,6 +237,18 @@ img {
   justify-content: center;
   align-items: center;
   height: 417px;
+  position: relative;
+  color: #fff;
+}
+
+.newsletter::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .newsletter > * {
@@ -247,6 +259,7 @@ img {
   font-size: 2rem;
   padding: 0.6em;
   font-weight: 800;
+  z-index: 2;
 }
 
 /* .newsletter input.emailInput {
@@ -258,12 +271,12 @@ img {
   outline: none;
 } */
 
-.newsletter input:hover {
+/* .newsletter input:hover {
   outline: none;
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
   width: 80%;
-}
+} */
 
 .newsletter input {
   border-bottom: 3px solid #000;
@@ -275,6 +288,9 @@ img {
   background-color: transparent;
   border-style: none;
   outline: none;
+  z-index: 2;
+  background: #fff;
+  width: 80%;
 }
 
 .newsletter .button {
@@ -285,6 +301,7 @@ img {
   color: #fff;
   padding: 15px 25px;
   text-align: center;
+  z-index: 2;
 }
 
 /* cta */
@@ -451,14 +468,17 @@ img {
     position: relative;
   }
 
-  .slider .arrows .fa-arrow-left,
-  .slider .arrows .fa-arrow-right {
+  i#left-arrow.fas.fa-arrow-left,
+  i#right-arrow.fas.fa-arrow-right {
     position: absolute;
   }
 
-  .slider .arrows .fas.fa-arrow-left {
-    left: 50%;
-    bottom: 5px;
+  i#left-arrow.fas.fa-arrow-left {
+    left: 24%;
+  }
+
+  i#right-arrow.fas.fa-arrow-right {
+    right: 24%;
   }
 
   /* newsletter */
@@ -472,13 +492,14 @@ img {
   }
 
   .newsletter .emailInput,
-  .newsletter .emailInput:hover {
+  .newsletter .emailInput {
     width: 50%;
   }
 
-  .newsletter .emailInput:hover,
-  .newsletter .emailInput:focus {
+  .newsletter .emailInput,
+  .newsletter .emailInput {
     background: #fff;
+    border-radius: 5px;
     color: #000;
     font-size: 16px;
     text-align: center;
