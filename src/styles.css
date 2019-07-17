@@ -199,6 +199,18 @@ img {
   display: none;
 }
 
+.slider .white-bg .display {
+  position: relative;
+}
+
+.white-bg img {
+  position: absolute;
+  height: 65%;
+  bottom: -125%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .slider span {
   color: rgba(0, 0, 0, 0.87);
   padding: 5px;
@@ -468,6 +480,18 @@ img {
     position: relative;
   }
 
+  .slider .white-bg .display {
+    position: relative;
+  }
+
+  .white-bg img {
+    position: absolute;
+    height: 65%;
+    bottom: -125%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   i#left-arrow.fas.fa-arrow-left,
   i#right-arrow.fas.fa-arrow-right {
     position: absolute;
@@ -526,10 +550,11 @@ img {
 
   .cta {
     display: flex;
-    height: 8rem;
+    height: 6.5rem;
   }
 
   .cta > * {
     margin: 2em;
+    margin: 0px 2em;
   }
 }
