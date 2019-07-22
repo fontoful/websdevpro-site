@@ -3,6 +3,8 @@
 :root {
     --button-bg-color: #1890ff;
     --button-light-bg-color: #3595ee;
+    --main-bg-color: #343a40;
+    --light-bg-color: #f5f5f5;
 }
 
 * {
@@ -33,7 +35,7 @@ img {
 
 .showcase {
     height: 75vh;
-    background: #343a40;
+    background: var(--main-bg-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
