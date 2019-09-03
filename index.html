@@ -5,11 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <script src="https://kit.fontawesome.com/d8afc9f217.js"></script>
-        <link
+        <!-- <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"
-        />
+        /> -->
         <link rel="stylesheet" href="src/styles.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
         <title>Webs Dev Pro</title>
     </head>
@@ -37,8 +38,8 @@
         <section class="features">
             <h1>Key Features</h1>
 
-            <div class="cards animated bounceInLeft">
-                <div class="card">
+            <div class="cards" data-aos="fade-right">
+                <div class="card" >
                     <div class="sizing">
                         <i class="fa fa-mobile-alt"></i>
                     </div>
@@ -153,7 +154,7 @@
             </div>
         </section>
 
-        <section class="mixer">
+        <section class="mixer" data-aos="fade-left">
             <div class="wrapper">
                 <div class="sub-section1"></div>
                 <div class="container1">
@@ -181,7 +182,7 @@
             </div>
         </section>
 
-        <section class="faq">
+        <section class="faq" data-aos="fade-right">
             <h1>Why React</h1>
 
             <div class="grid-wrapper">
@@ -229,7 +230,7 @@
             </div>
         </section>
 
-        <section class="slider" id="slider">
+        <section class="slider" id="slider" data-aos="fade-right">
             <div class="white-bg">
                 <div class="display active">
                     <p>
@@ -287,6 +288,14 @@
                 >© Copyright <span id="copyright">2019</span> Web Dev Pro</span
             >
         </footer>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                offset: 400,
+                duration: 500
+            });
+        </script>
 
         <script src="./src/script.js"></script>
     </body>
